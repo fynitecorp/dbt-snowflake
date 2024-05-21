@@ -1,14 +1,43 @@
 jobs:
+  # Define a daily job
   - name: daily
-    schedule: 0 12 * * * # Define when this job should run, using cron format.
+    schedule: 0 12 * * * # Runs every day at 12:00pm (according to your warehouse timezone)
     steps:
+      - name: clean environment
+        command: dbt clean
+      - name: install dependencies
+        command: dbt deps
+      - name: debug configuration
+        command: dbt debug
+      - name: compile models
+        command: dbt compile
+      - name: generate docs
+        command: dbt docs generate
       - name: run models
         command: dbt run
       - name: test models
         command: dbt test
 
+  # Define a weekdays job
   - name: weekdays
-    schedule: 30 7 * * 1-5 # The example will run every weekday at 7:30am.
+    schedule: 30 7 * * 1-5 # Runs every weekday at 7:30am
     steps:
+      - name: clean environment
+        command: dbt clean
+      - name: install dependencies
+        command: dbt deps
+      - name: debug configuration
+        command: dbt debug
+      - name: compile models
+        command: dbt compile
+      - name: generate docs
+        command: dbt docs generate
       - name: run models
         command: dbt run
+
+  # Example of a job running every 5 minutes (commented out)
+  # - name: every5minutes
+  #   schedule: '*/5 * * * *' # Runs every 5 minutes
+  #   steps:
+  #     - name: run models
+  #       command: dbt run
