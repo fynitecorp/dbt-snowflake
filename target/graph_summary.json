@@ -1,1 +1,0 @@
-{"_invocation_id": "6419d9f5-9912-45ed-ae93-cd7abf289b93", "linked": {"0": {"name": "source.my_dbt_project.FIVETRAN_METADATA.EXAMPLE_DATA", "type": "source", "succ": [1]}, "1": {"name": "model.my_dbt_project.example_model", "type": "model"}}}
