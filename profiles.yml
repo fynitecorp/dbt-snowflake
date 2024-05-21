@@ -1,17 +1,15 @@
-
 my_dbt_profile:
   target: dev
   outputs:
     dev:
       type: snowflake
-      account: "lr09814.us-east-2.aws"
-      user: "f5tran_user"
-      password: "password123!@"
-      role: "f5tran_role"
-      database: "DB_FOR_DBT"
-      warehouse: "FIVETRAN_WAREHOUSE"
-      schema: "FIVETRAN_METADATA"
+      account: 'lr09814.us-east-2.aws'
+      user: 'f5tran_user'
+      password: 'password123!@'
+      role: 'f5tran_role'
+      database: 'DB_FOR_DBT'
+      warehouse: 'FIVETRAN_WAREHOUSE'
+      schema: 'FIVETRAN_METADATA'
       threads: 1
       client_session_keep_alive: false
       query_tag: 'dbt'
-
