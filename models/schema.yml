@@ -1,0 +1,10 @@
+
+version: 2
+
+sources:
+  - name: FIVETRAN_METADATA
+    database: DB_FOR_DBT
+    schema: FIVETRAN_METADATA
+    tables:
+      - name: EXAMPLE_DATA
+
