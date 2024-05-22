@@ -1,12 +1,11 @@
-
--- models/example_model.sql
+-- models/example_model_git.sql
 
 WITH source_data AS (
     SELECT
         column1,
         column2,
         column3
-    FROM {{ source('FIVETRAN_METADATA', 'EXAMPLE_DATA') }}
+    FROM {{ source('snowflake_dbt', 'EXAMPLE_DATA') }}
 )
 
 SELECT
