@@ -6,16 +6,3 @@ sources:
     schema: FIVETRAN_METADATA
     tables:
       - name: EXAMPLE_DATA
-
-models:
-  - name: example_model_git
-    description: "An example model that selects and sums columns from the source table."
-    columns:
-      - name: column1
-        description: "First column"
-      - name: column2
-        description: "Second column"
-      - name: column3
-        description: "Third column"
-      - name: column4
-        description: "Sum of column1, column2, and column3"
